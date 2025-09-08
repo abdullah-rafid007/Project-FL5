@@ -19,4 +19,5 @@ Welcome to the Honda Type R Comparison Website! This project allows users to exp
 ## Installation
 
 Clone the repository to your local machine:
+Then RUN the "index.html"
 
