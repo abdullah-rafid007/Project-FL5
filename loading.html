@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading | Honda Type R</title>
+  <link rel="stylesheet" href="css/style3.css" />
+</head>
+<body class="loading-body">
+  <div class="loader-wrapper">
+    <img src="assets/images/Landing.png" alt="Civic Car" class="car-image" />
+    <p class="loading-text">Scroll up to continue</p>
+  </div>
+
+  <script>
+    window.addEventListener("wheel", function (e) {
+      // Detect scroll-up using the wheel
+      if (e.deltaY < 0) { // If scroll direction is up
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 800); // Delay matches the CSS fade-out animation
+      }
+    });
+  </script>
+</body>
+</html>

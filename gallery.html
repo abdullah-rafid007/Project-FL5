@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Honda Type R | Discover</title>
+  <link rel="stylesheet" href="css/gallery.css"/>
+</head>
+<body>
+  <div class="gallery-container" id="galleryContainer">
+    <div class="gallery-strip">
+      <div class="left-panel">
+        <h2>DISCOVER</h2>
+        <h3>TYPE R</h3>
+        <p>
+          Legendary Civic Type R models built for speed, style, and spirit. Discover all 6 iconic generations that redefined performance driving.
+        </p>
+        <button>Explore ➜</button>
+      </div>
+      <div class="right-panel">
+        <div class="card" data-bg="assets/images/civic1.jpg">
+          <img src="assets/images/civic1.jpg" alt="Civic EK9" />
+          <div class="card-info">
+            <h4>Civic EK9</h4>
+            <p>Debuted VTEC magic in a hatchback icon.</p>
+          </div>
+        </div>
+        <div class="card" data-bg="assets/images/civic2.jpg">
+          <img src="assets/images/civic2.jpg" alt="Civic EP3" />
+          <div class="card-info">
+            <h4>Civic EP3</h4>
+            <p>UK-built with improved handling and hot hatch power.</p>
+          </div>
+        </div>
+        <div class="card" data-bg="assets/images/civic3.jpg">
+          <img src="assets/images/civic3.jpg" alt="Civic FD2" />
+          <div class="card-info">
+            <h4>Civic FD2</h4>
+            <p>Track-ready four-door beast with championship DNA.</p>
+          </div>
+        </div>
+        <div class="card" data-bg="assets/images/civic4.jpg">
+          <img src="assets/images/civic4.jpg" alt="Civic FK2" />
+          <div class="card-info">
+            <h4>Civic FK2</h4>
+            <p>Turbocharged performance with Euro flair.</p>
+          </div>
+        </div>
+        <div class="card" data-bg="assets/images/civic5.jpg">
+          <img src="assets/images/civic5.jpg" alt="Civic FK8" />
+          <div class="card-info">
+            <h4>Civic FK8</h4>
+            <p>Aggressive aerodynamics with track-focused tech.</p>
+          </div>
+        </div>
+        <div class="card" data-bg="assets/images/civic6.jpg">
+          <img src="assets/images/civic6.jpg" alt="Civic FL5" />
+          <div class="card-info">
+            <h4>Civic FL5</h4>
+            <p>Modern performance and refined engineering excellence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const galleryContainer = document.getElementById('galleryContainer');
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const bg = card.getAttribute('data-bg');
+        galleryContainer.style.backgroundImage = `url(${bg})`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        galleryContainer.style.backgroundImage = '';
+      });
+    });
+  </script>
+</body>
+</html>

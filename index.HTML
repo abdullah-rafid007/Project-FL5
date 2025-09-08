@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honda Type R | Home</title>
+  <link href="https://db.onlinewebfonts.com/c/a90119f48fabb1c3c969f7af9cd43c0?family=Tabac+G3+SemiBold" rel="stylesheet">
+  <link rel="stylesheet" href="css/style3.css" />
+</head>
+<body class="home-body">
+  <div class="type-r-logo">
+    <img src="assets/images/type-r-logo.png.png" alt="Type R Logo">
+  </div>
+
+  <div class="overlay">
+    <div class="text-content">
+      <h4 class="subheading">Best Destinations Around the World</h4>
+      <h1 class="main-title">
+        Travel, enjoy<br>and live a new<br><span class="highlight">and full life</span>
+      </h1>
+      <p class="description">
+        Built Wicket longer admire do barton vanity itself do in it.<br>
+        Preferred to sportsmen it engrossed listening. Park gate<br>
+        umbe.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Zoom out and redirect on scroll down
+    window.addEventListener('wheel', (e) => {
+      if (e.deltaY > 0) {
+        document.body.classList.add('zoom-out');
+        setTimeout(() => {
+          window.location.href = "compare.html";
+        }, 1200);
+      }
+    });
+  </script>
+</body>
+</html>
