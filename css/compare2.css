@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scrolling */
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.window-container {
+    background-color: Black;
+    border-radius: 20px;
+    padding: 0; /* Removed padding */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Full width with some margin */
+    height: 100vh; /* Full height with some margin */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers everything vertically */
+    align-items: center; /* Centers everything horizontally */
+    animation: fadeIn 1s ease-out; /* Apply the fade-in animation */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 5 columns in total */
+    gap: 0px; /* Adding some space between the images */
+    margin-top: 0px;
+    width: 50%; /* Adjusting width of the car container */
+    justify-items: center; /* Centers the cars */
+}
+.car {
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    height: 400px; /* Standard height */
+    width: 100%;
+    max-width: 200px; /* Adjust max-width for each car image */
+}
+
+.car-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.compare-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.compare-btn:hover {
+    background-color: #e67e22; /* Slightly darker shade of orange */
+    opacity: 1;
+    box-shadow: 0 0 10px 3px rgba(255, 165, 0, 0.8); /* Glowing effect */
+}
+
+.car:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Full background image on hover */
+.car:hover .car-img {
+    transform: scale(1.2); /* Slight zoom on hover to show full image */
+    transition: transform 0.3s ease-in-out;
+}
+
+.car:hover {
+    background-image: url(''); /* Clear any previous background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}

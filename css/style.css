@@ -1,0 +1,163 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition */
+}
+
+/* General page styles */
+.home-body {
+  background: url("../assets/images/civic1.jpg") no-repeat center center/cover;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-out {
+  transform: scale(0.3);
+  opacity: 0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Adding transition to zoom-out */
+}
+
+.type-r-logo {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20rem;
+  font-weight: bold;
+  color: #ff1f40;
+  opacity: 1;
+  z-index: 2;
+  animation: zoomOutMoveToTop 1.5s ease-in-out forwards; /* Increased animation duration */
+}
+
+.type-r-logo img {
+  width: 1000px;
+  height: auto;
+  transform-origin: center center; /* Ensures the image scales from the center */
+}
+
+/* Zoom-out animation with smooth easing */
+@keyframes zoomOutMoveToTop {
+  0% {
+    transform: translate(-50%, -0.0005%) scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.2); /* Zoom out and move to the top */
+    opacity: 1; /* Fade out */
+  }
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  position: relative;
+  padding: 0 20px;
+}
+
+.text-content {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  text-align: left;
+  max-width: 100%;
+}
+
+.subheading {
+  font-family: 'Tabac G3 SemiBold', sans-serif;
+  color: #ff1f40;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.main-title {
+  font-family: 'Tabac G3 SemiBold', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: white;
+  letter-spacing: 0.2px;
+}
+
+.main-title .highlight {
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #ff1f40;
+}
+
+.description {
+  font-family: 'Tabac G3 SemiBold';
+  font-size: 18px;
+  line-height: 1.6;
+  color: red;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* General Button Styles */
+.buttons-container {
+  position: absolute;
+  bottom: 25%;
+  left: 15%; /* Position buttons on the left side */
+  transform: translateX(0); /* Remove previous center alignment */
+  display: flex;
+  flex-direction: row; /* Stack the buttons vertically */
+  gap: 10px;
+  z-index: 3;
+}
+
+.btn {
+  font-family: 'Tabac G3 SemiBold', sans-serif;
+  font-size: 18px;
+  color: white;
+  padding: 15px 30px;
+  border: 2px solid #ff1f40; /* Border color matching the buttons */
+  background-color: transparent; /* Transparent background */
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare-btn {
+  color: #ff1f40;
+  border-color: #ff1f40;
+}
+
+.compare-btn:hover {
+  background-color: #ff1f40; /* Background on hover */
+  color: white; /* Text color on hover */
+}
+
+.engine-sound-btn {
+  color: #ff6600;
+  border-color: #ff6600;
+}
+
+.engine-sound-btn:hover {
+  background-color: #ff6600; /* Darker shade on hover */
+  color: white;
+}
+
+/* Adding a scale effect when hovering over the buttons */
+.btn:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}

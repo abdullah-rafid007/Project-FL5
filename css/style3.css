@@ -1,0 +1,180 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* LOADING PAGE */
+.loading-body {
+  background: url("../assets/images/891569.jpg") no-repeat center center/cover;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.car-image {
+  position: absolute;
+  top: 47%; 
+  left: 50%;
+  width: 250px;
+  transform: translate(-50%, -50%);
+  animation: carMove 4s ease-out forwards;
+  z-index: 2;
+}
+
+@keyframes carMove {
+  0% {
+    left: 47%; 
+    opacity: 0.3;
+    transform: translateX(-50%) scale(0.95);
+  }
+  100% {
+    left: 85%; 
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.loading-text {
+  position: absolute;
+  bottom: 20px; 
+  font-family: 'Tabac G3 SemiBold';
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Existing fade-out animation */
+.fade-out {
+  animation: fadeOut 1.5s ease-in-out forwards; /* Slow down the fade-out effect */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* General page styles */
+.home-body {
+  background: url("../assets/images/home-bg.jpg") no-repeat center center/cover;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-out {
+  transform: scale(0.3);
+  opacity: 0;
+}
+
+.type-r-logo {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20rem;
+  font-weight: bold;
+  color: #ff1f40;
+  opacity: 1;
+  z-index: 2;
+  animation: zoomOutMoveToTop 3s ease-in-out forwards;
+}
+
+.type-r-logo img {
+  width: 1000px;
+  height: auto;
+  transform-origin: center center; /* Ensures the image scales from the center */
+}
+@keyframes zoomOutMoveToTop {
+  0% {
+    transform: translate(-50%, -0.0005%) scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.2); /* Zoom out and move to the top */
+    opacity: 1; /* Fade out */
+  }
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  position: relative;
+  padding: 0 20px;
+}
+
+.text-content {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  text-align: left;
+  max-width: 100%;
+}
+
+.subheading {
+  font-family: 'Tabac G3 SemiBold', sans-serif;
+  color: #ff1f40;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.main-title {
+  font-family: 'Tabac G3 SemiBold', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: white;
+  letter-spacing: 0.2px;
+}
+
+.main-title .highlight {
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: #ff1f40;
+}
+
+.description {
+  font-family: 'Tabac G3 SemiBold';
+  font-size: 18px;
+  line-height: 1.6;
+  color: red;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
