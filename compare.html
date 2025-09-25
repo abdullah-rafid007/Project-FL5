@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Cars</title>
+    <link rel="stylesheet" href="css/compare2.css">
+</head>
+<body>
+    <div class="window-container">
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <img src="assets/images/type-r-logo.png.png" alt="Logo" class="logo">
+        </div>
+
+        <!-- Car Gallery Section -->
+        <div class="car-container">
+            <div class="car" data-bg="assets/images/civic1.jpg">
+                <img src="assets/images/civic1.jpg" alt="Car 1" class="car-img">
+                <a href="EK9.html"><button class="compare-btn">EK9</button></a>
+            </div>
+            <div class="car" data-bg="assets/images/civic2.jpg">
+                <img src="assets/images/civic2.jpg" alt="Car 2" class="car-img">
+                <a href="ep3.html"><button class="compare-btn">EP3</button></a>
+            </div>
+            <div class="car" data-bg="assets/images/civic3.jpg">
+                <img src="assets/images/civic3.jpg" alt="Car 3" class="car-img">
+                <a href="FN2.html"><button class="compare-btn">FN2</button></a>
+            </div>
+            <div class="car" data-bg="assets/images/FD2.jpg">
+                <img src="assets/images/FD2.jpg" alt="Car 4" class="car-img">
+                <a href="FD2.html"><button class="compare-btn">FD2</button></a>
+            </div>
+            <div class="car" data-bg="assets/images/civic5.jpg">
+                <img src="assets/images/civic5.jpg" alt="Car 5" class="car-img">
+                <a href="FK8.html"><button class="compare-btn">FK8</button></a>
+            </div>
+            <!-- New Car Image -->
+            <div class="car" data-bg="assets/images/civic6.jpg">
+                <img src="assets/images/civic6.jpg" alt="Car 6" class="car-img">
+                <a href="FL5.html"><button class="compare-btn">FL5</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cars = document.querySelectorAll('.car');
+        const windowContainer = document.querySelector('.window-container');
+
+        cars.forEach(car => {
+            car.addEventListener('mouseenter', () => {
+                const carImage = car.getAttribute('data-bg');
+                windowContainer.style.backgroundImage = `url(${carImage})`;
+                windowContainer.style.backgroundSize = 'cover';
+                windowContainer.style.backgroundPosition = 'center';
+                windowContainer.style.backgroundRepeat = 'no-repeat';
+            });
+
+            car.addEventListener('mouseleave', () => {
+                windowContainer.style.backgroundImage = '';
+            });
+        });
+    </script>
+</body>
+</html>
